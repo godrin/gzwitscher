@@ -7,8 +7,20 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+<div id='user_info'>
+  <%if current_user%>
+    <%= current_user.email %>
+    <%= link_to 'logout', '/users/sign_out'%>
+  <%end%>
+</div>
+<div id='title'>
+  <a href='/'>gZwitscher</a>
+</div>
 <%= yield %>
-
+<div id='footer'>
+  Impressum
+  Kontakt
+  Sonstiges
+</div>
 </body>
 </html>

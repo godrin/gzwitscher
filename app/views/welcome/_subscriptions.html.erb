@@ -1,0 +1,16 @@
+My subscriptions
+<br/>
+
+
+<table>
+
+<% @subscriptions.each do |subscription| %>
+  <tr>
+    <td><%= subscription.user.email %></td>
+    <td><%= button_to 'Remove', [subscription.user,subscription], :confirm => "Really ?", :method=>:delete%></td>
+  </tr>
+<% end %>
+</table>
+
+
+

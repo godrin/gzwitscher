@@ -1,0 +1,54 @@
+body {
+  margin:0px; 
+}
+a {
+  text-decoration:none;
+}
+
+#user_info {
+  float:right;
+}
+
+#footer, #title {
+  border-width:0px;
+  border-color:#000;
+  border-style:solid;
+  background:#EEE;
+}
+
+
+#title {
+  padding:5px;
+  font-size:20pt;
+  margin-bottom:10px;
+  border-bottom-width:1px;
+}
+
+#footer {
+  border-top-width:1px;
+  bottom:0px;
+  position:fixed;
+  width:100%;
+}
+
+#destiny {
+  margin:10px;
+  a {
+   background-color:#EEE;
+   padding:5px;
+   margin:10px;
+  }
+}
+
+#someusers {
+  float:right;
+  margin-right:20px;
+  ul {
+    li {
+      list-style-type:none;
+      margin:5px;
+    }
+    padding:0px;
+    margin:0px;
+  }
+}

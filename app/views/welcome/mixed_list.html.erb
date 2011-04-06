@@ -1,5 +1,14 @@
 <h1>All messages</h1>
 
+<div id='someusers'>
+  Some users:
+  <ul>
+   <% @someusers.each{|user| %>
+     <li><%= link_to user.email,[user] %></li>
+   <% } %>
+  </ul>
+</div>
+
 <table>
 
 <% @messages.each do |message| %>

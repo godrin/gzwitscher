@@ -1,4 +1,5 @@
 .bundle
+*.mdown
 db/*.sqlite3
 log/*.log
 tmp/

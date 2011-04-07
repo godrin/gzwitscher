@@ -1,16 +1,23 @@
-My subscriptions
-<br/>
-
+<h2>My subscriptions</h2>
 
 <table>
 
 <% @subscriptions.each do |subscription| %>
   <tr>
-    <td><%= subscription.user.email %></td>
+    <td><%= link_to subscription.author.email,[subscription.author] %></td>
     <td><%= button_to 'Remove', [subscription.user,subscription], :confirm => "Really ?", :method=>:delete%></td>
   </tr>
 <% end %>
 </table>
 
+<h2>My followers</h2>
+<table>
+
+<% @followers.each do |follower| %>
+  <tr>
+    <td><%= link_to follower.author.email,[follower.author] %></td>
+  </tr>
+<% end %>
+</table>
 
 

@@ -1,3 +1,6 @@
+<%= link_to 'New Message', new_user_message_path(current_user) %>
+
+<br />
 <div class='messages'>
   <% @messages.each do |message| %>
     <div class='entry'>
@@ -12,8 +15,4 @@
     </div>
   <% end %>
 </div>
-
-<br />
-
-<%= link_to 'New Message', new_user_message_path(current_user) %>
 

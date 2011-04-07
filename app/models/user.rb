@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_many :messages
-
+  has_many :subscriptions
   def am_i_subscribed?(current_user)
     my_subscription(current_user)
   end

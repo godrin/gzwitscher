@@ -1,15 +1,17 @@
-<h1>Users emails</h1>
+<h1>All Users</h1>
 
-<table>
-  <tr>
-    <th>Users' emails</th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.email %></td>
-    <td><%= link_to 'Show', user %></td>
-  </tr>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.email,[user] %>
+      <% if user!=current_user %>
+        <% if user.am_i_subscribed?(current_user) %>
+          <%= button_to "Unsubscribe", user_subscription_path(current_user,user.my_subscription(current_user)),:method=>:delete %>
+        <% else %>
+          <%= button_to "Subscribe", user_subscriptions_path(user),:method=>:post %>
+        <% end %>
+      <% end %>
+    </li>
 <% end %>
-</table>
+</ul>
 

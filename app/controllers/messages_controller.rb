@@ -47,6 +47,7 @@ class MessagesController < ApplicationController
     @message.user_id=current_user.id # always save as current_user - never as selected
     respond_to do |format|
       if @message.save
+        MessageRelation.create(:user_id=>current_user.id,:message_id=>@message.id)
         format.html { redirect_to([@message.user,@message], :notice => 'Message was successfully created.') }
         format.xml  { render :xml => @message, :status => :created, :location => @message }
       else

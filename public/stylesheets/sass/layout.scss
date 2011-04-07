@@ -52,3 +52,18 @@ a {
     margin:0px;
   }
 }
+
+.messages {
+  .entry {
+    .head {
+      color:#AAA;
+      font-size:8pt;
+    }
+    .message {
+      background-color:#EEE;
+      width:40em;
+    }
+    margin-bottom:7px;
+  }
+}
+

@@ -1,0 +1,19 @@
+<div class='messages'>
+  <% @messages.each do |message| %>
+    <div class='entry'>
+      <div class='head'>
+        <%= time_ago_in_words(message.created_at) %> ago
+        <%= link_to message.user.email, [message.user] %>
+        wrote:
+      </div>
+      <div class='message'>
+        '<%= message.text %>'
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<br />
+
+<%= link_to 'New Message', new_user_message_path(current_user) %>
+

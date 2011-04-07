@@ -48,7 +48,7 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save
         MessageRelation.create(:user_id=>current_user.id,:message_id=>@message.id)
-        format.html { redirect_to([@message.user,@message], :notice => 'Message was successfully created.') }
+        format.html { redirect_to([@message.user], :notice => 'Message was successfully created.') }
         format.xml  { render :xml => @message, :status => :created, :location => @message }
       else
         format.html { render :action => "new" }

@@ -1,0 +1,11 @@
+<%= form_for([current_user,@message||Message.new]) do |f| %>
+
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text, :size=>142 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

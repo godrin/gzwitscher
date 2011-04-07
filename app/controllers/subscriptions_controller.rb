@@ -1,4 +1,6 @@
 class SubscriptionsController < ApplicationController
+  before_filter :authenticate_user!
+  
   def create
     user=User.where(:id=>params[:user_id]).first
     if user and user!=current_user
